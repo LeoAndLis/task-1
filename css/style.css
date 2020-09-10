@@ -162,6 +162,7 @@ body{
 /* header menu */
 
 .header__nav{
+    margin: 0 16px;
     position: relative;
 }
 
@@ -207,6 +208,10 @@ body{
     flex-direction: column;
     justify-content: space-between;
     margin-top: 16px;
+}
+
+.content__text{
+    padding: 0 16px;
 }
 
 .text__container{
@@ -281,7 +286,7 @@ body{
     }
 
     .header__nav {
-        margin-left: 24px;
+        margin: 0 24px 0 16px;
     }
 
     .header__menu{
@@ -292,7 +297,7 @@ body{
 
     .content__container{
         flex-direction: row;
-        padding: 0 32px;
+        padding: 0 24px;
         justify-content: space-between;
     }
 
@@ -359,7 +364,7 @@ body{
 
     .header__nav{
         flex-wrap: wrap;
-        margin-top: 8px;
+        margin: 8px 32px 0 24px;
     }
 
     .menu{
@@ -367,7 +372,7 @@ body{
     }
 
     .content__container{
-        padding-bottom: 50px;
+        padding: 0 32px 50px 32px;
     }
 
     .content__text{
