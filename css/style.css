@@ -302,6 +302,7 @@ body{
     }
 
     .content__text{
+        padding: 0;
         width: 312px;
     }
 
