@@ -63,6 +63,7 @@ button{
 
 body{
     background-color: #FFFFFF;
+    color: #1B1C21;
 }
 
 /* width under or equals 320px */
@@ -72,7 +73,7 @@ body{
 .main-container {
     background-color: #F8F8F8;
     margin: 0 auto;
-    max-width: 320px;
+    width: 320px;
 }
 
 .header{
@@ -94,7 +95,9 @@ body{
 .header__button{
     background-position: 50% 50%;
     background-repeat: no-repeat;
+    font-size: 0;
     height: 40px;
+    color: transparent;
     width: 40px;
 }
 
@@ -242,7 +245,7 @@ body{
 
     .main-container {
         margin: 0 auto;
-        max-width: 768px;
+        width: 768px;
     }
 
     /* header */
@@ -316,7 +319,7 @@ body{
 @media screen and (min-width: 1120px) {
     .main-container {
         margin: 0 auto;
-        max-width: 1120px;
+        width: 1120px;
     }
 
     .header{
@@ -339,6 +342,8 @@ body{
 
     .header__button{
         background-position-x: right;
+        color: #1B1C21;
+        font-size: 16px;
         margin-left: 32px;
         margin-right: 0;
         padding: 0 48px 0 0;
