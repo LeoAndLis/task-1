@@ -157,7 +157,7 @@ body{
 
 /* content */
 
-.content {
+.content__wraper {
     background-color: #F8F8F8;
 }
 
@@ -362,9 +362,16 @@ body{
     }
 
     .content__header{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         padding-top: 40px;
     }
 
+    .content__buttons{
+        display: flex;
+        margin-right: 32px;
+    }
     .content__button{
         background-position-x: right;
         margin-left: 32px;
