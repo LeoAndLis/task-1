@@ -333,7 +333,6 @@ body{
     
     .content__img{
         border-radius: 6px;
-        margin-top: -16px;
     }
 }
 
@@ -397,9 +396,5 @@ body{
 
     .content__img-block{
         height: 307px;
-    }
-    
-    .content__img{
-        margin-top: -23px;
     }
 }
