@@ -55,7 +55,14 @@ button:hover{
     opacity: 0.7;
 }
 
+
 /* width under or equals 320px */
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+}
 
 .body{
     background-color: #FFFFFF;
@@ -224,6 +231,7 @@ button:hover{
 }
 
 .menu__item{
+    display: inline;
     white-space: nowrap;
 }
 
@@ -292,6 +300,7 @@ button:hover{
     padding-left: 32px;
 }
 
+
 .text__show-more{
     margin-top: 16px;
 }
@@ -355,14 +364,19 @@ button:hover{
         line-height: 20px;
     }
 
+
     .article__img-block{
         height: auto;
+        height: 208px;
         margin-top: 0;
+        overflow: hidden;
         width: 50%;
     }
 
+
     .article__img{
         border-radius: 6px;
+        margin-top: -16px;
     }
 }
 
@@ -374,6 +388,10 @@ button:hover{
     .header{
         margin-top: -88px;
         visibility: hidden;
+        height: auto;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding-top: 42px;
     }
 
     .header__links{
@@ -437,7 +455,17 @@ button:hover{
         padding: 0 32px 50px 32px;
     }
 
+
     .article__text{
         max-width: 490px;
+        width: 490px;
+    }
+
+    .content__img-block{
+        height: 307px;
+    }
+    
+    .content__img{
+        margin-top: -23px;
     }
 }
