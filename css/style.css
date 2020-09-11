@@ -79,7 +79,6 @@ body{
     flex-direction: column;
     height: 88px;
     justify-content: space-between;
-    padding: 0 8px;
 }
 
 .header__buttons{
