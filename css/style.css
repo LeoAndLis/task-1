@@ -87,6 +87,7 @@ body{
     border-bottom: 1px solid #D9FFF5;
     display: flex;
     justify-content: space-evenly;
+    min-width: 320px;
     padding: 18px 0;
 }
 
