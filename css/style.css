@@ -67,23 +67,19 @@ button:hover{
 body{
     background-color: #FFFFFF;
     color: #1B1C21;
+    font-size: 16px;
 }
 
 /* width under or equals 320px */
 
 /* header */
 
-.main-container {
-    background-color: #F8F8F8;
-    margin: 0 auto;
-    width: 320px;
-}
-
 .header{
     display: flex;
     flex-direction: column;
-    height: 216px;
+    height: 88px;
     justify-content: space-between;
+    padding: 0 8px;
 }
 
 .header__buttons{
@@ -95,13 +91,21 @@ body{
     padding: 18px 0;
 }
 
-.header__button{
+.button{
     background-position: 50% 50%;
     background-repeat: no-repeat;
-    font-size: 0;
     height: 40px;
-    color: transparent;
     width: 40px;
+}
+
+.header__button{
+    margin: 0 8px;
+}
+
+.header__logo-container{
+    display: flex;
+    flex-grow: 1;
+    margin: 0 8px;
 }
 
 .header__logo{
@@ -151,9 +155,19 @@ body{
     background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect width='40' height='40' rx='20' fill='%23FF3E79'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12 11C12 10.4477 12.4477 10 13 10H27C27.5523 10 28 10.4477 28 11V28.5C27.1716 28.5 26.5001 29.1715 26.5 29.9999H25.5C25.4999 29.1715 24.8284 28.5 24 28.5C23.1716 28.5 22.5001 29.1715 22.5 29.9999H21.5C21.4999 29.1715 20.8284 28.5 20 28.5C19.1716 28.5 18.5001 29.1715 18.5 29.9999H17.5C17.4999 29.1715 16.8284 28.5 16 28.5C15.1716 28.5 14.5001 29.1715 14.5 29.9999H13.5C13.4999 29.1715 12.8284 28.5 12 28.5V11ZM21.4163 21.7884C20.5536 22.3443 19.4703 22.5936 18.3296 22.3827C16.5274 22.0472 15.0895 20.5326 14.8595 18.7114C14.4952 15.8261 16.9492 13.4201 19.8538 13.8802C21.656 14.1677 23.1034 15.6439 23.4006 17.4365C23.5828 18.5484 23.3239 19.5741 22.7871 20.4272L24.896 22.5265C25.2699 22.9003 25.2699 23.5138 24.896 23.8876C24.5126 24.2711 23.8991 24.2711 23.5252 23.8972L21.4163 21.7884ZM16.7059 18.0588C16.7059 16.7599 17.76 15.7058 19.0588 15.7058C20.3576 15.7058 21.4118 16.7599 21.4118 18.0588C21.4118 19.3576 20.3576 20.4117 19.0588 20.4117C17.76 20.4117 16.7059 19.3576 16.7059 18.0588Z' fill='white'/%3E%3C/svg%3E%0A");
 }
 
-/*  header title  */
+/* content */
 
-.header__title{
+.content {
+    background-color: #F8F8F8;
+}
+
+.content__header{
+    padding-top: 24px;
+}
+
+/*  content title  */
+
+.content__title{
     background: url("data:image/svg+xml,%3Csvg width='4' height='40' viewBox='0 0 4 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M4 4C4 1.79086 2.20914 0 0 0V40C2.20914 40 4 38.2091 4 36V4Z' fill='%2341F6D7'/%3E%3C/svg%3E%0A") no-repeat 0 50%;
     font-size: 28px;
     height: 40px;
@@ -162,14 +176,20 @@ body{
     padding-left: 16px;
 }
 
-/* header menu */
+/* content buttons */
 
-.header__nav{
-    margin: 0 16px;
+.content__buttons{
+    display: none;
+}
+
+/* content menu */
+
+.content__nav{
+    margin: 24px 0 0 16px;
     position: relative;
 }
 
-.header__menu{
+.content__menu{
     display: flex;
 }
 
@@ -178,7 +198,6 @@ body{
 }
 
 .menu__item{
-    display: inline;
     white-space: nowrap;
 }
 
@@ -213,13 +232,11 @@ body{
     width: 24px;
 }
 
-/* content */
-
 .content__container{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin-top: 16px;
+    margin-top: 24px;
 }
 
 .content__text{
@@ -243,7 +260,6 @@ body{
 
 .text__button{
     background: url("data:image/svg+xml,%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z' fill='%2341F6D7'/%3E%3C/svg%3E%0A") no-repeat 8px 50%;
-    font-size: 16px;
     height: 24px;
     letter-spacing: -0.2px;
     line-height: 24px;
@@ -325,9 +341,8 @@ body{
     }
 
     .content__img-block{
-        height: 208px;
+        height: auto;
         margin-top: 0;
-        overflow: hidden;
         width: 50%;
     }
     
@@ -337,33 +352,21 @@ body{
 }
 
 @media screen and (min-width: 1120px) {
-    .main-container {
+    .content__wraper {
         margin: 0 auto;
         width: 1120px;
     }
 
     .header{
-        height: auto;
-        flex-direction: row;
-        flex-wrap: wrap;
-        padding-top: 42px;
+        display:none;
     }
 
-    .header__buttons{
-        border: none;
-        background-color: #F8F8F8;
-        margin: 0 32px 0 0;
-        padding: 0;
+    .content__header{
+        padding-top: 40px;
     }
 
-    .header__buttons :not(:nth-last-child(-n+2)){
-        display: none;
-    }
-
-    .header__button{
+    .content__button{
         background-position-x: right;
-        color: #1B1C21;
-        font-size: 16px;
         margin-left: 32px;
         margin-right: 0;
         padding: 0 48px 0 0;
@@ -371,15 +374,15 @@ body{
         white-space: nowrap;
     }
 
-    .header__title{
+    .content__title{
         order: -1;
         background: url("data:image/svg+xml,%3Csvg width='3' height='40' viewBox='0 0 3 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3 1.5C3 0.671574 2.32843 0 1.5 0C0.671573 0 0 0.671573 0 1.5V38.5C0 39.3284 0.671573 40 1.5 40C2.32843 40 3 39.3284 3 38.5V1.5Z' fill='%2341F6D7'/%3E%3C/svg%3E%0A") no-repeat 0 50%;
         padding-left: 32px;
     }
 
-    .header__nav{
+    .content__nav{
         flex-wrap: wrap;
-        margin: 8px 32px 0 24px;
+        margin: 8px 32px 0 32px;
     }
 
     .menu{
@@ -391,10 +394,6 @@ body{
     }
 
     .content__text{
-        width: 490px;
-    }
-
-    .content__img-block{
-        height: 307px;
+        max-width: 490px;
     }
 }

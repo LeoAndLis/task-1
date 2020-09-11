@@ -7,68 +7,76 @@
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-    <div class="main-container">
         <header class="header">
             <section class="header__buttons">
-                <button class="header__button button--burger"></button>
+                <button class="button header__button button--burger"></button>
                 <div class="separator header__separator">
                     <div class="separator__body"></div>
                 </div>
-                <img  class="header__logo" src="css/images/logo.svg" alt="Логотип">
+                <div class="header__logo-container">
+                    <img  class="header__logo" src="css/images/logo.svg" alt="Логотип">
+                </div>
                 <div class="header__connection">
-                    <button class="header__button button--call"></button>
-                    <button class="header__button button--chat"></button>
-                    <button class="header__button button--profile"></button>
+                    <button class="button header__button button--call"></button>
+                    <button class="button header__button button--chat"></button>
+                    <button class="button header__button button--profile"></button>
                 </div>
                 <div class="separator header__separator">
                     <div class="separator__body"></div>
                 </div>
-                <button class="header__button button--repair">Оставить заявку</button>
-                <button class="header__button button--checkstatus">Статус ремонта</button>
+                <button class="button header__button button--repair"></button>
+                <button class="button header__button button--checkstatus"></button>
             </section>
-            <h1 class="header__title">Услуги и сервисы</h1>
-            <nav class="header__nav nav">
-                <ul class="header__menu menu">
-                    <li class="menu__item">
-                        <a class="menu__link menu__link--active" href="#">Ремонтируемые бренды</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">Ремонтируемые устройства</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">Цены на услуги</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">Адреса сервисных центров</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">Специальные цены</a>
-                    </li>
-                    <li class="menu__item">
-                        <a class="menu__link" href="#">Отзывы</a>
-                    </li>
-                </ul>
-                <div class="nav__gradient"></div>
-            </nav>
         </header>
         <main class="content">
-            <article class="content__container">
-                <div class="content__text text">
-                    <div class="text__container">
-                        <p class="text__item">
-                            Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-                        </p>
-                        <p class="text__item">
-                            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
-                        </p>
+            <div class="content__wraper">
+                <header class="content__header">
+                    <h1 class="content__title">Услуги и сервисы</h1>
+                    <div class="content__buttons">
+                        <button class="button content__button button--repair">Оставить заявку</button>
+                        <button class="button content__button button--checkstatus">Статус ремонта</button>
                     </div>
-                    <button class="text__button">Читать далее</button>
-                </div>
-                <div class="content__img-block">
-                    <img class="content__img" src="css/images/img_logo.png">
-                </div>
-            </article>
+                    <nav class="content__nav nav">
+                        <ul class="content__menu menu">
+                            <li class="menu__item">
+                                <a class="menu__link menu__link--active" href="/">Ремонтируемые бренды</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="/">Ремонтируемые устройства</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="/">Цены на услуги</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="/">Адреса сервисных центров</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="/">Специальные цены</a>
+                            </li>
+                            <li class="menu__item">
+                                <a class="menu__link" href="/">Отзывы</a>
+                            </li>
+                        </ul>
+                        <div class="nav__gradient"></div>
+                    </nav>
+                </header>
+                <article class="content__container">
+                    <div class="content__text text">
+                        <div class="text__container">
+                            <p class="text__item">
+                                Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                            </p>
+                            <p class="text__item">
+                                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                            </p>
+                        </div>
+                        <button class="text__button">Читать далее</button>
+                    </div>
+                    <div class="content__img-block">
+                        <img class="content__img" src="css/images/img_logo.png" alt="Логотип компании">
+                    </div>
+                </article>
+            </div>
         </main>
-    </div>
     </body>
 </html>
