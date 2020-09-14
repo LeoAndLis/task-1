@@ -1,74 +1,81 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <title>Task 1.3</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <header class="header">
-            <button class="button header__button button--burger"></button>
-            <div class="header__logo logo">
-                <a class="logo__link" href="#">
-                    <img class="logo__img" src="images/logo.svg" alt="Логотип">
-                </a>
-            </div>
-            <div class="header__connection">
-                <button class="button header__button button--call"></button>
-                <button class="button header__button button--chat"></button>
-                <a href="#" class="header__link link--profile"></a>
-            </div>
-            <div class="header__links">
-                <a href="#" class="button header__link link--repair">Оставить заявку</a>
-                <a href="#" class="button header__link link--checkstatus">Статус ремонта</a>
-            </div>
-        </header>
-        <main class="content">
-            <div class="content__wraper">
-                <header class="content__header">
-                    <h1 class="content__title">Услуги и сервисы</h1>
-                    <nav class="content__nav nav">
-                        <ul class="content__menu menu">
-                            <li class="menu__item">
-                                <a class="menu__link menu__link--active" href="#">Ремонтируемые бренды</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">Ремонтируемые устройства</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">Цены на услуги</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">Адреса сервисных центров</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">Специальные цены</a>
-                            </li>
-                            <li class="menu__item">
-                                <a class="menu__link" href="#">Отзывы</a>
-                            </li>
-                        </ul>
-                        <div class="nav__gradient"></div>
-                    </nav>
-                </header>
-                <article class="content__container">
-                    <div class="content__text text">
-                        <div class="text__container">
-                            <p class="text__item">
-                                Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
-                            </p>
-                            <p class="text__item">
-                                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
-                            </p>
-                        </div>
-                        <button class="text__button">Читать далее</button>
+<head>
+    <title>Task 1.3</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <button class="header__button button--burger round-button"></button>
+        <div class="header__logo logo">
+            <a class="logo__link" href="#">
+                <img class="logo__img" src="images/logo.svg" alt="Логотип">
+            </a>
+        </div>
+        <div class="header__feedback">
+            <button class="header__button button--call round-button"></button>
+            <button class="header__button button--chat round-button"></button>
+            <a href="#" class="header__link link--profile round-button"></a>
+        </div>
+        <div class="header__links">
+            <a href="#" class="header__link--with-text link--repair round-button">Оставить заявку</a>
+            <a href="#" class="header__link--with-text link--checkstatus round-button">Статус ремонта</a>
+        </div>
+    </header>
+    <main class="main">
+        <div class="main__wrapper">
+            <header class="main__header">
+                <h1 class="main__title title">Услуги и сервисы</h1>
+                <nav class="main__nav nav">
+                    <ul class="nav__menu menu">
+                        <li class="menu__item">
+                            <a class="menu__link menu__link--active" href="#">Ремонтируемые бренды</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Ремонтируемые устройства</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Цены на услуги</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Адреса сервисных центров</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Специальные цены</a>
+                        </li>
+                        <li class="menu__item">
+                            <a class="menu__link" href="#">Отзывы</a>
+                        </li>
+                    </ul>
+                </nav>
+            </header>
+            <article class="main__article article">
+                <div class="article__text text">
+                    <div class="text__container">
+                        <p class="text__item">
+                            Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете
+                            отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                        </p>
+                        <p class="text__item">
+                            Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает
+                            большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по
+                            рекомендациям и, в свою очередь, советуют нас родным и близким.
+                        </p>
                     </div>
-                    <div class="content__img-block">
-                        <img class="content__img" src="images/img_logo.png" alt="Логотип компании">
-                    </div>
-                </article>
-            </div>
-        </main>
-    </body>
+                    <button class="text__show-more show-more">Читать далее</button>
+                </div>
+                <div class="article__img-block">
+                    <picture>
+                        <source srcset="images/img_logo_s.png" media="(max-width: 320px)">
+                        <img class="article__img" src="images/img_logo.png" alt="Логотип компании">
+                    </picture>
+                </div>
+            </article>
+        </div>
+    </main>
+</div>
+</body>
 </html>
