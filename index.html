@@ -8,34 +8,26 @@
     </head>
     <body>
         <header class="header">
-            <div class="header__buttons">
-                <button class="button header__button button--burger"></button>
-                <div class="separator header__separator">
-                    <div class="separator__body"></div>
-                </div>
-                <div class="header__logo-container">
-                    <img class="header__logo" src="images/logo.svg" alt="Логотип">
-                </div>
-                <div class="header__connection">
-                    <button class="button header__button button--call"></button>
-                    <button class="button header__button button--chat"></button>
-                    <button class="button header__button button--profile"></button>
-                </div>
-                <div class="separator header__separator">
-                    <div class="separator__body"></div>
-                </div>
-                <button class="button header__button button--repair"></button>
-                <button class="button header__button button--checkstatus"></button>
+            <button class="button header__button button--burger"></button>
+            <div class="header__logo logo">
+                <a class="logo__link" href="#">
+                    <img class="logo__img" src="images/logo.svg" alt="Логотип">
+                </a>
+            </div>
+            <div class="header__connection">
+                <button class="button header__button button--call"></button>
+                <button class="button header__button button--chat"></button>
+                <a href="#" class="header__link link--profile"></a>
+            </div>
+            <div class="header__links">
+                <a href="#" class="button header__link link--repair">Оставить заявку</a>
+                <a href="#" class="button header__link link--checkstatus">Статус ремонта</a>
             </div>
         </header>
         <main class="content">
             <div class="content__wraper">
                 <header class="content__header">
                     <h1 class="content__title">Услуги и сервисы</h1>
-                    <div class="content__buttons">
-                        <button class="button content__button button--repair">Оставить заявку</button>
-                        <button class="button content__button button--checkstatus">Статус ремонта</button>
-                    </div>
                     <nav class="content__nav nav">
                         <ul class="content__menu menu">
                             <li class="menu__item">
