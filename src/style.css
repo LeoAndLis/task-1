@@ -231,7 +231,7 @@ button:hover{
 
 .nav__link{
     display: block;
-    padding: 9px 16px 9px;
+    padding: 9px 16px;
 }
 
 .nav__link--active,
@@ -239,7 +239,7 @@ button:hover{
     background-color: #ffffff;
     border: 2px solid #B8FFEC;
     border-radius: 6px;
-    padding: 7px 14px 7px;
+    padding: 7px 14px;
 }
 
 .nav__link:not(.nav__link--active):hover{
@@ -426,7 +426,7 @@ button:hover{
 
     .main__nav{
         flex-wrap: wrap;
-        padding: 8px 32px 0 32px;
+        padding: 0 32px;
     }
 
     .nav::after{
@@ -438,7 +438,7 @@ button:hover{
     }
 
     .nav__item{
-        margin-right: 10px;
+        margin: 8px 10px 0 0;
     }
 
     .main__article{
