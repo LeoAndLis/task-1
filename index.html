@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="body">
 <div class="wrapper">
     <header class="header">
-        <button class="header__button button--burger round-button"></button>
+        <button class="button header__button button--burger round-element"></button>
         <div class="header__logo logo">
-            <a class="logo__link" href="#">
+            <a class="link logo__link" href="#">
                 <img class="logo__img" src="images/logo.svg" alt="Логотип">
             </a>
         </div>
         <div class="header__feedback">
-            <button class="header__button button--call round-button"></button>
-            <button class="header__button button--chat round-button"></button>
-            <a href="#" class="header__link link--profile round-button"></a>
+            <button class="button header__button button--call round-element"></button>
+            <button class="button header__button button--chat round-element"></button>
+            <a href="#" class="link header__link link--profile round-element"></a>
         </div>
         <div class="header__links">
-            <a href="#" class="header__link--with-text link--repair round-button">Оставить заявку</a>
-            <a href="#" class="header__link--with-text link--checkstatus round-button">Статус ремонта</a>
+            <a href="#" class="link header__link--with-text link--repair round-element">Оставить заявку</a>
+            <a href="#" class="link header__link--with-text link--checkstatus round-element">Статус ремонта</a>
         </div>
     </header>
     <main class="main">
@@ -32,22 +32,22 @@
                 <nav class="main__nav nav">
                     <ul class="nav__menu menu">
                         <li class="menu__item">
-                            <a class="menu__link menu__link--active" href="#">Ремонтируемые бренды</a>
+                            <a class="link menu__link menu__link--active" href="#">Ремонтируемые бренды</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Ремонтируемые устройства</a>
+                            <a class="link menu__link" href="#">Ремонтируемые устройства</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Цены на услуги</a>
+                            <a class="link menu__link" href="#">Цены на услуги</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Адреса сервисных центров</a>
+                            <a class="link menu__link" href="#">Адреса сервисных центров</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Специальные цены</a>
+                            <a class="link menu__link" href="#">Специальные цены</a>
                         </li>
                         <li class="menu__item">
-                            <a class="menu__link" href="#">Отзывы</a>
+                            <a class="link menu__link" href="#">Отзывы</a>
                         </li>
                     </ul>
                 </nav>
@@ -65,12 +65,13 @@
                             рекомендациям и, в свою очередь, советуют нас родным и близким.
                         </p>
                     </div>
-                    <button class="text__show-more show-more">Читать далее</button>
+                    <button class="button text__show-more show-more">Читать далее</button>
                 </div>
                 <div class="article__img-block">
                     <picture>
                         <source srcset="images/img_logo_s.png" media="(max-width: 320px)">
-                        <img class="article__img" src="images/img_logo.png" alt="Логотип компании">
+                        <source srcset="images/img_logo_m.png" media="(max-width: 1120px)">
+                        <img class="img article__img" src="images/img_logo.png" alt="Логотип компании">
                     </picture>
                 </div>
             </article>
