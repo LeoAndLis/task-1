@@ -80,6 +80,7 @@ button:hover{
 }
 
 .wrapper{
+    background-color: #F8F8F8;
     margin: 0 auto;
     min-width: 320px;
     position: relative;
