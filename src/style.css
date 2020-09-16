@@ -130,6 +130,10 @@ button:hover{
     order: 2;
 }
 
+.logo__link{
+    display: block;
+}
+
 .header__button{
     margin: 0 8px;
 }
@@ -144,18 +148,19 @@ button:hover{
     margin: 0 8px;
 }
 
-.header__feedback{
+.header__feedback-list{
     display: none;
 }
 
-.services{
+.services-list{
     display: flex;
 }
-.header__services{
+
+.header__services-list{
     order: 5;
 }
 
-.services__link{
+.services-list__link{
     color: transparent;
     display: block;
     font-size: 0;
@@ -220,14 +225,16 @@ button:hover{
 
 .nav__menu{
     display: flex;
-}
-
-.nav__menu{
-    overflow: hidden;
+    overflow-y: hidden;
+    overflow-x: scroll;
 }
 
 .nav__item{
     white-space: nowrap;
+}
+
+.nav__item:last-child{
+    border-right: 24px solid transparent;
 }
 
 .nav__link{
@@ -272,7 +279,7 @@ button:hover{
     padding: 0 16px;
 }
 
-.article__container{
+.article__text-container{
     height: 90px;
     overflow: hidden;
 }
@@ -314,20 +321,16 @@ article__item:last-child{
         order: 1;
     }
 
-    .feedback{
+    .feedback-list{
         display: flex;
         justify-content: space-between;
         width: 152px;
     }
 
-    .header__feedback{
+    .header__feedback-list{
         margin-left: auto;
         margin-right: 8px;
         order: 3;
-    }
-
-    .header__button{
-        margin: 0 8px;
     }
 
     .header::before,
@@ -356,7 +359,7 @@ article__item:last-child{
         max-width: 45%;
     }
 
-    .article__container{
+    .article__text-container{
         height: 160px;
     }
 
@@ -385,14 +388,14 @@ article__item:last-child{
         visibility: hidden;
     }
 
-    .header__services{
+    .header__services-list{
         position: absolute;
         right: 32px;
         top: 130px;
         visibility: visible;
     }
 
-    .services__link{
+    .services-list__link{
         color: #1B1C21;
         display: block;
         font-size: 16px;
@@ -440,10 +443,15 @@ article__item:last-child{
 
     .nav__menu{
         flex-wrap: wrap;
+        overflow: hidden;
     }
 
     .nav__item{
         margin: 8px 10px 0 0;
+    }
+
+    .nav__item:last-child{
+        border-right: none;
     }
 
     .main__article{
