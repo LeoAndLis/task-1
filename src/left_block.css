@@ -32,6 +32,7 @@ html {
 body{
     font-family: 'TT Lakes', sans-serif;
     font-size: 16px;
+    color: #1B1C21;
 }
 
 button,
@@ -57,7 +58,12 @@ img {
 }
 
 a{
+    color: #1B1C21;
     text-decoration: none;
+}
+
+a:hover{
+    color: #7E7E82;
 }
 
 button{
@@ -67,14 +73,13 @@ button{
     font-size: 16px;
 }
 
-/* body */
+/* wrapper */
 
 .wrapper{
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
     display: flex;
     flex-direction: column;
-    height: 100%;
-    position: fixed;
+    height: 100vh;
     width: 320px;
 }
 
@@ -101,35 +106,27 @@ button{
 
 /* main */
 
-.main{
+.menu{
+    display: flex;
+    flex-direction: column;
     flex-grow: 1;
 }
 
-.main__nav{
-    flex-shrink: 0;
-    padding-top: 36px;
-}
-
-.main__menu{
-    display: flex;
-    flex-direction: column;
-}
-
-.main__menu-item{
+.menu-item{
     margin: 12px 0;
 }
 
-.main__menu-link{
-    background: none;
+.menu-link{
+    background: url("images/transparent.png") no-repeat 0 50%;
     display: block;
     height: 32px;
     line-height: 32px;
     padding-left: 24px;
 }
 
-.main__menu-link--active,
-.main__menu-link:hover{
-    background: url("images/link_back.png") no-repeat 0 50%;
+.menu-link--active,
+.menu-link:hover{
+    background-image: url("images/link_back.png");
 }    
 
 /* footer*/
@@ -172,15 +169,7 @@ button{
     margin-right: 7px;
 }
 
-/* link */
-
-.link{
-    overflow: visible;
-    color: #1B1C21;
-}
-
-.link--active,
-.link:hover{
+.language-list__link--active{
     color: #7E7E82;
 }
 
@@ -195,6 +184,7 @@ button{
     width: 40px;
 }
 
+.logo__link:hover,
 .round-icon:hover{
     opacity: 0.7;
 }
@@ -222,5 +212,5 @@ button{
 /* transition */
 
 .transition {
-  transition: 1s;
+  transition: 0.5s;
 }
