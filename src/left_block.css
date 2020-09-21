@@ -105,7 +105,7 @@ button:hover{
     display: block;
 }
 
-.menu__logo{
+.menu-header__logo{
     margin-left: 16px;
     margin-right: auto;
 }
