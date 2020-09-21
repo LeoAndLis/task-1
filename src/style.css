@@ -156,10 +156,6 @@ button:hover{
     display: flex;
 }
 
-.header__services-list{
-    order: 5;
-}
-
 .services-list__link{
     color: transparent;
     display: block;
