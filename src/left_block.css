@@ -82,7 +82,7 @@ button:hover{
 
 /* wrapper */
 
-.menu{
+.site-menu{
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
     display: flex;
     flex-direction: column;
@@ -92,7 +92,7 @@ button:hover{
 
 /* header */
 
-.menu-header{
+.site-menu__header{
     align-items: center;
     background-color: #ffffff;
     display: flex;
@@ -105,30 +105,26 @@ button:hover{
     display: block;
 }
 
-.menu-header__logo{
+.site-menu__logo{
     margin-left: 16px;
     margin-right: auto;
 }
 
 /* menu */
 
-.site-menu{
+.site-menu__list{
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     padding-top: 12px;
 }
 
-.site-menu__item{
-    margin: 16px 0;
-}
-
 .site-menu__link{
     background: url("images/transparent.png") no-repeat 0 50%;
     display: block;
-    height: 24px;
+    height: 56px;
     line-height: 24px;
-    padding-left: 24px;
+    padding: 16px 0 16px 24px;
     position: relative;
 }
 
@@ -139,7 +135,7 @@ button:hover{
     left: 0;
     opacity: 0;
     position: absolute;
-    top: -4px;
+    top: 12px;
     transition: opacity 0.5s;
     width: 4px;
 }
@@ -151,7 +147,7 @@ button:hover{
 
 /* footer*/
 
-.menu-footer{
+.site-menu__footer{
     align-content: flex-start;
     align-items: flex-start;
     display: flex;
@@ -166,15 +162,15 @@ button:hover{
     width: 152px;
 }
 
-.menu-footer__feedback-list{
+.site-menu__feedback-list{
     margin-bottom: 16px;
 }
 
-.menu-footer__email{
+.site-menu__email{
     margin-bottom: 12px;
 }
 
-.menu-footer__phone{
+.site-menu__phone{
     font-size: 24px;
     font-weight: bold;
     letter-spacing: -0.6px;
@@ -182,15 +178,15 @@ button:hover{
     margin-bottom: auto;
 }
 
-.language-list{
+.site-menu__language-list{
     display: flex;
 }
 
-.language-list__item{
+.site-menu__language-item{
     margin-right: 7px;
 }
 
-.language-list__link--active{
+.site-menu__language-link--active{
     color: #7E7E82;
 }
 
