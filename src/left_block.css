@@ -82,7 +82,7 @@ button:hover{
 
 /* wrapper */
 
-.site-menu{
+.menu{
     box-shadow: 16px 0px 52px rgba(14, 24, 80, 0.2);
     display: flex;
     flex-direction: column;
@@ -92,12 +92,11 @@ button:hover{
 
 /* header */
 
-.site-menu__header{
+.menu__header{
     align-items: center;
     background-color: #ffffff;
     display: flex;
     flex-shrink: 0;
-    justify-content: space-between;
     padding: 18px 24px;
 }
 
@@ -105,30 +104,29 @@ button:hover{
     display: block;
 }
 
-.site-menu__logo{
+.menu__logo{
     margin-left: 16px;
     margin-right: auto;
 }
 
 /* menu */
 
-.site-menu__list{
+.menu__list{
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    margin-bottom: auto;
     padding-top: 12px;
 }
 
-.site-menu__link{
+.menu__link{
     background: url("images/transparent.png") no-repeat 0 50%;
     display: block;
-    height: 56px;
     line-height: 24px;
-    padding: 16px 0 16px 24px;
+    padding: 16px 24px;
     position: relative;
 }
 
-.site-menu__link::before {
+.menu__link::before {
     content: "";
     background-image: url("images/link_back.png");
     height: 32px;
@@ -140,14 +138,14 @@ button:hover{
     width: 4px;
 }
 
-.site-menu__link--active::before,
-.site-menu__link:hover::before{
+.menu__link--active::before,
+.menu__link:hover::before{
     opacity: 1;
 }
 
 /* footer*/
 
-.site-menu__footer{
+.menu__footer{
     align-content: flex-start;
     align-items: flex-start;
     display: flex;
@@ -162,31 +160,36 @@ button:hover{
     width: 152px;
 }
 
-.site-menu__feedback-list{
+.menu__feedback-list{
     margin-bottom: 16px;
 }
 
-.site-menu__email{
+.menu__contacts{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+}
+
+.menu__email{
     margin-bottom: 12px;
 }
 
-.site-menu__phone{
+.menu__phone{
     font-size: 24px;
     font-weight: bold;
     letter-spacing: -0.6px;
     line-height: 32px;
-    margin-bottom: auto;
 }
 
-.site-menu__language-list{
+.menu__language-list{
     display: flex;
 }
 
-.site-menu__language-item{
+.menu__language-item{
     margin-right: 7px;
 }
 
-.site-menu__language-link--active{
+.menu__language-link--active{
     color: #7E7E82;
 }
 
