@@ -6,7 +6,6 @@ let swiperIsActivated = false;
 
 const showHideBrands = document.querySelector('.brand-block__show-all');
 const brandsBlockList = document.querySelector('.brand-block__list');
-const brandsBlockItems = document.querySelectorAll('.brand-block__item');
 
 showHideBrands.addEventListener('click', function(){
         if (showHideBrands.innerText === 'Показать все') {
