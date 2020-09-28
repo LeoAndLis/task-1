@@ -1,0 +1,228 @@
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('/fonts/TTLakes-Regular.eot');
+    src: local('TT Lakes Regular'), local('TTLakes-Regular'),
+    url('fonts/TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TTLakes-Regular.woff') format('woff'),
+    url('fonts/TTLakes-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'TT Lakes';
+    src: url('fonts/TTLakes-Bold.eot');
+    src: local('TT Lakes Bold'), local('TTLakes-Bold'),
+    url('fonts/TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
+    url('fonts/TTLakes-Bold.woff') format('woff'),
+    url('fonts/TTLakes-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+body{
+    font-family: 'TT Lakes', sans-serif;
+    font-size: 16px;
+    color: #1B1C21;
+}
+
+button,
+ul{
+    list-style: none;
+    padding: 0;
+}
+
+body,
+h2,
+button,
+ul,
+li {
+    margin: 0;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a{
+    text-decoration: none;
+    transition: opacity 0.5s;
+}
+
+a:hover{
+    opacity: 0.7;
+}
+
+button{
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: opacity 0.5s;
+}
+
+button:hover{
+    opacity: 0.7;
+}
+
+/* section */
+
+.section {
+    background-color: #F2F2F2;
+    border-top: 1px solid #D9FFF5;
+    min-width: 320px;
+    padding-bottom: 34px;
+}
+
+.section__title {
+    background-color: #fff;
+    color: #7E7E82;
+    display: block;
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    padding: 16px;
+    text-transform: uppercase;
+}
+
+.section__list {
+    display: flex;
+    padding: 0;
+    position: relative;
+}
+
+.swiper-container::after{
+    background: linear-gradient(270deg, #F8F8F8 16.84%, transparent 100%);
+    content: "";
+    height: 82px;
+    position: absolute;
+    right: 0;
+    top: -5px;
+    width: 24px;
+    z-index: 2;
+}
+
+.section__item {
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 6px;
+    height: 72px;
+    margin-right: 16px;
+    width: 240px;
+}
+
+.section__link {
+    align-items: center;
+    background: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='1' y='1' width='38' height='38' rx='19' stroke='%23FF3E79' stroke-width='2'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M21.5 20L17.7071 16.2071C17.3166 15.8166 17.3166 15.1834 17.7071 14.7929L17.7929 14.7071C18.1834 14.3166 18.8166 14.3166 19.2071 14.7071L23.7929 19.2929C24.1834 19.6834 24.1834 20.3166 23.7929 20.7071L19.2071 25.2929C18.8166 25.6834 18.1834 25.6834 17.7929 25.2929L17.7071 25.2071C17.3166 24.8166 17.3166 24.1834 17.7071 23.7929L21.5 20Z' fill='%23FF3E79'/%3E%3C/svg%3E%0A") no-repeat 184px 50%;
+    display: flex;
+    height: 100%;
+    padding: 0 56px 0 16px;
+    width: 100%;
+}
+
+.section__content{
+    padding: 16px 0 8px 16px;
+}
+
+.swiper-container {
+    height: 120px;
+}
+
+.section__img {
+    max-width: 164px;
+}
+
+.section__show-all {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+
+    .section__content{
+        padding: 24px 0 16px 24px;
+    }
+
+    .swiper-container {
+        height: auto;
+    }
+
+    .section__content::after{
+        display: none;
+    }
+
+    .section__list{
+        flex-wrap: wrap;
+        max-height: 176px;
+        overflow: hidden;
+    }
+
+    .section__list--show-all{
+        max-height: none;
+    }
+
+    .section__item {
+        margin: 0 24px 16px 0;
+        width: 224px;
+    }
+    
+    .section__link {
+        background-position-x: 168px;
+    }
+
+    .section__pagination {
+        display: none;
+    }
+
+    .show-more{
+        background: url("data:image/svg+xml,%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M6.50008 0.500076L4.00008 3.00008L1.50008 0.500076C1.22393 0.223933 0.776218 0.223933 0.500076 0.500076C0.223933 0.776218 0.223933 1.22393 0.500075 1.50008L3.29297 4.29297C3.68349 4.68349 4.31666 4.68349 4.70718 4.29297L7.50008 1.50008C7.77622 1.22393 7.77622 0.776218 7.50008 0.500076C7.22393 0.223933 6.77622 0.223933 6.50008 0.500076ZM6.50008 6.50008L4.00008 9.00008L1.50008 6.50008C1.22393 6.22393 0.776218 6.22393 0.500076 6.50008C0.223933 6.77622 0.223933 7.22393 0.500075 7.50008L3.29297 10.293C3.68349 10.6835 4.31666 10.6835 4.70718 10.293L7.50008 7.50008C7.77622 7.22393 7.77622 6.77622 7.50008 6.50008C7.22393 6.22393 6.77622 6.22393 6.50008 6.50008Z' fill='%2341F6D7'/%3E%3C/svg%3E%0A") no-repeat 8px 50%;
+        display: block;
+        height: 24px;
+        letter-spacing: -0.2px;
+        line-height: 24px;
+        padding-left: 32px;
+    }
+
+    .section__show-all {
+        margin-left: 24px;
+    }
+
+    .section__show-all--hide{
+        background: url("data:image/svg+xml,%3Csvg width='8' height='11' viewBox='0 0 8 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1.49992 10.4999L3.99992 7.99992L6.49992 10.4999C6.77607 10.7761 7.22378 10.7761 7.49992 10.4999C7.77607 10.2238 7.77607 9.77607 7.49992 9.49992L4.70703 6.70703C4.31651 6.31651 3.68334 6.31651 3.29282 6.70703L0.499924 9.49993C0.223781 9.77607 0.223781 10.2238 0.499924 10.4999C0.776066 10.7761 1.22378 10.7761 1.49992 10.4999ZM1.49992 4.49992L3.99992 1.99992L6.49992 4.49992C6.77607 4.77607 7.22378 4.77607 7.49992 4.49992C7.77607 4.22378 7.77607 3.77607 7.49992 3.49992L4.70703 0.707032C4.31651 0.316508 3.68334 0.316507 3.29282 0.707031L0.499924 3.49993C0.223781 3.77607 0.223781 4.22378 0.499924 4.49993C0.776066 4.77607 1.22378 4.77607 1.49992 4.49992Z' fill='%2341F6D7'/%3E%3C/svg%3E%0A") no-repeat 8px 50%;
+    }
+}
+
+@media screen and (min-width: 1120px) {
+    .wrapper {
+        margin: 0 auto;
+        max-width: 1120px;
+    }
+
+    .section__content {
+        padding-left: 32px;
+    }
+
+    .section__item {
+        margin-right: 32px;
+        width: 240px;
+    }
+
+    .section__link {
+        background-position-x: 184px;
+    }
+
+    .section__show-all {
+        margin-left: 32px;
+    }
+}
