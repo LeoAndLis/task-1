@@ -119,6 +119,7 @@ button:hover{
     box-sizing: border-box;
     border-radius: 6px;
     height: 72px;
+    margin-right: 16px;
     width: 240px;
 }
 
@@ -133,7 +134,7 @@ button:hover{
 
 .swiper-container{
     height: 132px;
-    padding: 16px 24px 8px 16px;
+    padding: 16px 8px 8px 16px;
 }
 
 .brand-block__pagination{

@@ -1,29 +1,48 @@
-if(document.documentElement.clientWidth < 768) {
-    const mySwiper = new Swiper('.swiper-container', {
-        // Optional parameters
-        direction: 'horizontal',
-        slidesPerView: 'auto',
-        spaceBetween: 16,
-        loop: false,
+window.onresize = addSwiper;
+window.onload   = addSwiper;
 
-        // If we need pagination
-        pagination: {
-            el: '.swiper-pagination',
-        },
-    });
-}
+let mySwiper;
+let swiperIsActivated = false;
 
 const showHideBrands = document.querySelector('.brand-block__show-all');
-const brandsBlock = document.querySelector('.brand-block__list');
+const brandsBlockList = document.querySelector('.brand-block__list');
+const brandsBlockItems = document.querySelectorAll('.brand-block__item');
 
 showHideBrands.addEventListener('click', function(){
         if (showHideBrands.innerText === 'Показать все') {
             showHideBrands.innerText = 'Скрыть';
             showHideBrands.classList.add('brand-block__show-all--hide');
-            brandsBlock.classList.add('brand-block__list--show-all');
+            brandsBlockList.classList.add('brand-block__list--show-all');
         } else {
             showHideBrands.innerText = 'Показать все';
             showHideBrands.classList.remove('brand-block__show-all--hide');
-            brandsBlock.classList.remove('brand-block__list--show-all');
+            brandsBlockList.classList.remove('brand-block__list--show-all');
         }
     });
+
+
+function addSwiper(){
+    if(document.documentElement.clientWidth < 768) {
+        if (swiperIsActivated){
+            return false;
+        }
+        mySwiper = new Swiper('.swiper-container', {
+            direction: 'horizontal',
+            slidesPerView: 'auto',
+            loop: false,
+            pagination: {
+              el: '.swiper-pagination',
+            },
+            a11y: {
+              enabled: false,  
+            },
+        });
+        swiperIsActivated = true;
+    } else {
+        if (!swiperIsActivated){
+            return false;
+        }
+        mySwiper.destroy(true, true);
+        swiperIsActivated = false;
+    }
+}
