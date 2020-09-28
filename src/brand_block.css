@@ -103,6 +103,7 @@ button:hover{
 }
 
 .swiper-container::after{
+    background: -webkit-linear-gradient(270deg, #F8F8F8 16.84%, transparent 100%);
     background: linear-gradient(270deg, #F8F8F8 16.84%, transparent 100%);
     content: "";
     height: 81px;
