@@ -5,17 +5,17 @@ let mySwiper;
 let swiperIsActivated = false;
 
 const showHideContent = document.querySelector('.section__show-more');
-const sectionList = document.querySelector('.section__list');
+const sectionContent = document.querySelector('.section__content');
 
 showHideContent.addEventListener('click', function(){
         if (showHideContent.innerText === 'Показать все') {
             showHideContent.innerText = 'Скрыть';
             showHideContent.classList.add('section__show-more--hide');
-            sectionList.classList.add('section__list--show-all');
+            sectionContent.classList.add('section__content--show-all');
         } else {
             showHideContent.innerText = 'Показать все';
             showHideContent.classList.remove('section__show-more--hide');
-            sectionList.classList.remove('section__list--show-all');
+            sectionContent.classList.remove('section__content--show-all');
         }
     });
 
