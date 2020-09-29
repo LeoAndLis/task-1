@@ -4,17 +4,17 @@ window.onload   = addSwiper;
 let mySwiper;
 let swiperIsActivated = false;
 
-const showHideContent = document.querySelector('.section__show-all');
+const showHideContent = document.querySelector('.section__show-more');
 const sectionList = document.querySelector('.section__list');
 
 showHideContent.addEventListener('click', function(){
         if (showHideContent.innerText === 'Показать все') {
             showHideContent.innerText = 'Скрыть';
-            showHideContent.classList.add('section__show-all--hide');
+            showHideContent.classList.add('section__show-more--hide');
             sectionList.classList.add('section__list--show-all');
         } else {
             showHideContent.innerText = 'Показать все';
-            showHideContent.classList.remove('section__show-all--hide');
+            showHideContent.classList.remove('section__show-more--hide');
             sectionList.classList.remove('section__list--show-all');
         }
     });
