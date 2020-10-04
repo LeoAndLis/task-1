@@ -1,0 +1,11 @@
+.wrapper{
+  background-color: $bgColor;
+  margin: 0 auto;
+  min-width: $minWidth;
+  position: relative;
+}
+@media screen and (min-width: $desktop) {
+  .wrapper {
+    max-width: $desktop - $minWidth;
+  }
+}
