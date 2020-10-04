@@ -1,4 +1,6 @@
 .idea/
 /nbproject/
 /src/fonts/
-/src/images/
+/src/img/
+node_modules/
+dist/
