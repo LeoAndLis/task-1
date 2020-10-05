@@ -287,8 +287,8 @@ button:hover{
     margin-bottom: 20px;
 }
 
-article__item:last-child{
-    margin-borrom: 0;
+.article__item:last-child{
+    margin-bottom: 0;
 }
 
 .show-more{

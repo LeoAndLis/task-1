@@ -1,15 +1,18 @@
 .menu{
-  background: #FFFFFF;
+  background: $bgSite;
   box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
   display: flex;
   flex-direction: column;
   height: 100vh;
+  left: -320px;
+  position: absolute;
+  top: 0;
   width: 320px;
 }
 
 .menu__header{
   align-items: center;
-  background-color: #ffffff;
+  background-color: $bgSite;
   display: flex;
   flex-shrink: 0;
   padding: 18px 24px;
@@ -98,5 +101,7 @@
 @media screen and (min-width: $desktop) {
   .menu {
     box-shadow: none;
+    left: 0;
+    top: 88px;
   }
 }
