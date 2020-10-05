@@ -6,7 +6,6 @@
 }
 @media screen and (min-width: $desktop) {
   .wrapper {
-    max-width: $desktop - $minWidth;
     padding-left: 320px;
   }
 }

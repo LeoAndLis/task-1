@@ -4,6 +4,7 @@
   <title>Task 1.3</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" media="screen and (max-width:768px)">
 </head>
 <body class="body">
 <div class="wrapper">
@@ -137,21 +138,36 @@
             большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по
             рекомендациям и, в свою очередь, советуют нас родным и близким.
           </p>
+          <p class="article__item">
+            Сервисный центр "CPS" это не только высокое качество ремонта, но и высокие стандарты сервиса.
+            Кроме удобного графика работы call-центра для консультаций пользователей техники, Вы также можете
+            воспользоваться бесплатной клиентской курьерской службой. И это очень удобно!
+          </p>
+          <p class="article__item">
+            Теперь не нужно стоять в очередях, ожидая записи на ремонт или диагностику. Теперь даже ехать
+            никуда не нужно! Курьер сервисного центра заберёт ваше устройство на диагностику или ремонт,
+            и по окончании работ вернёт по нужному адресу.
+          </p>
+          <p class="article__item">
+            В нашем сервисном центре действует скидочная система. Если отправить заявку на платную услугу через сайт —
+            автоматически срабатывает скидочный купон. Так же имеются прогрессивные скидки и для постоянных клиентов.
+            Подробности уточняйте у операторов!
+          </p>
         </div>
-        <button class="article__show-more show-more">Читать далее</button>
+        <button class="article__show-more show-more" data-show-more-name="Читать далее" data-show-all-class="article__text-container--show-all">Читать далее</button>
       </div>
       <div class="article__img-block">
         <picture>
           <source srcset="img/img_logo_s.png" media="(max-width: 320px)">
           <source srcset="img/img_logo_m.png" media="(max-width: 528px)">
-          <source srcset="img/img_logo_m.png" media="(min-width: 768px)">
+          <source srcset="img/img_logo.png" media="(min-width: 768px)">
           <img class="article__img" src="img/img_logo.png" alt="Логотип компании">
         </picture>
       </div>
     </article>
     <section class="section page__section">
       <h2 class="section__title">Ремонт техники различных брендов</h2>
-      <div class="section__content swiper-container section__content--brands">
+      <div class="section__content brands-swiper-container section__content--brands">
         <ul class="brands-list swiper-wrapper">
           <li class="brands-list__item swiper-slide">
             <a href="#" class="brands-list__link">
@@ -209,11 +225,60 @@
             </a>
           </li>
         </ul>
-        <div class="swiper-pagination section__pagination"></div>
+        <div class="brands-swiper-pagination section__pagination"></div>
       </div>
-      <button class="show-more section__show-more">Показать все</button>
+      <button class="show-more section__show-more" data-show-more-name="Показать все" data-show-all-class="section__content--show-all">Показать все</button>
+    </section>
+    <section class="section page__section">
+      <h2 class="section__title">Ремонт различных видов техники</h2>
+      <div class="section__content equipment-swiper-container section__content--equipment">
+        <ul class="equipment-list swiper-wrapper">
+          <li class="equipment-list__item swiper-slide">
+            <a href="#" class="equipment-list__link">
+              Ремонт ноутбуков
+            </a>
+          </li>
+          <li class="equipment-list__item swiper-slide">
+            <a href="#" class="equipment-list__link">
+              Ремонт планшетов
+            </a>
+          </li>
+          <li class="equipment-list__item swiper-slide">
+            <a href="#" class="equipment-list__link">
+              Ремонт ПК
+            </a>
+          </li>
+          <li class="equipment-list__item swiper-slide">
+            <a href="#" class="equipment-list__link">
+              Ремонт мониторов
+            </a>
+          </li>
+          <li class="equipment-list__item swiper-slide">
+            <a href="#" class="equipment-list__link">
+              Ремонт проекторов
+            </a>
+          </li>
+          <li class="equipment-list__item swiper-slide">
+            <a href="#" class="equipment-list__link">
+              Ремонт моноблоков
+            </a>
+          </li>
+        </ul>
+        <div class="equipment-swiper-pagination section__pagination"></div>
+      </div>
+      <button class="show-more section__show-more" data-show-more-name="Показать все" data-show-all-class="section__content--show-all">Показать все</button>
     </section>
   </main>
+  <footer class="footer">
+    <ul class="footer__list">
+      <li class="footer__item">&copy;2019 CPS<br>Разработано командой Apesong</li>
+      <li class="footer__item">
+        <a class="footer__link" href="#">Политики конфиденциальности</a>
+      </li>
+      <li class="footer__item">Информация, размещенная на данной странице, не является публичной оффертой</li>
+    </ul>
+  </footer>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </div>
 </body>
 </html>

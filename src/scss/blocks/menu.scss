@@ -1,13 +1,21 @@
 .menu{
   background: $bgSite;
-  box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
+  box-shadow: none;
   display: flex;
   flex-direction: column;
   height: 100vh;
-  left: -320px;
+  left: -340px;
   position: absolute;
   top: 0;
+  transition-duration: 0.5s;
+  transition-property: left, box-shadow;
   width: 320px;
+  z-index: 10;
+}
+
+.menu--visible{
+  box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
+  left: 0;
 }
 
 .menu__header{
@@ -102,6 +110,6 @@
   .menu {
     box-shadow: none;
     left: 0;
-    top: 88px;
+    position: fixed;
   }
 }

@@ -1,0 +1,20 @@
+.equipment-swiper-container::after{
+  background: linear-gradient(270deg, $bgSections 16.84%, transparent 100%);
+  content: "";
+  height: 172px;
+  position: absolute;
+  right: 0;
+  top: 11px;
+  width: 24px;
+  z-index: 2;
+}
+
+.equipment-swiper-container {
+  height: 210px;
+}
+
+@media screen and (min-width: $tablet) {
+  .equipment-swiper-container {
+    height: auto;
+  }
+}

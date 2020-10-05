@@ -1,3 +1,4 @@
 import '../scss/style.scss';
 
-console.log('Works!');
+import './events-listeners';
+import './swiper-init';
