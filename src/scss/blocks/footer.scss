@@ -2,7 +2,7 @@
   color: $activeLinkColor;
   font-size: 14px;
   line-height: 16px;
-  padding: 40px 16px 19px 16px;
+  padding: 25px 16px 19px 16px;
 }
 
 .footer__list{
@@ -21,12 +21,12 @@
 }
 
 @media screen and (min-width: $tablet) {
-  .footer__list{
-    flex-direction: row;
-  }
-
   .footer{
     padding: 40px 24px 24px 24px;
+  }
+
+  .footer__list{
+    flex-direction: row;
   }
 
   .footer__item{

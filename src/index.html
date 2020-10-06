@@ -167,7 +167,7 @@
     </article>
     <section class="section page__section">
       <h2 class="section__title">Ремонт техники различных брендов</h2>
-      <div class="section__content brands-swiper-container section__content--brands">
+      <div class="section__content swiper-container section__content--brands">
         <ul class="brands-list swiper-wrapper">
           <li class="brands-list__item swiper-slide">
             <a href="#" class="brands-list__link">
@@ -225,13 +225,13 @@
             </a>
           </li>
         </ul>
-        <div class="brands-swiper-pagination section__pagination"></div>
+        <div class="swiper-pagination section__pagination"></div>
       </div>
       <button class="show-more section__show-more" data-show-more-name="Показать все" data-show-all-class="section__content--show-all">Показать все</button>
     </section>
     <section class="section page__section">
       <h2 class="section__title">Ремонт различных видов техники</h2>
-      <div class="section__content equipment-swiper-container section__content--equipment">
+      <div class="section__content swiper-container section__content--equipment">
         <ul class="equipment-list swiper-wrapper">
           <li class="equipment-list__item swiper-slide">
             <a href="#" class="equipment-list__link">
@@ -264,13 +264,13 @@
             </a>
           </li>
         </ul>
-        <div class="equipment-swiper-pagination section__pagination"></div>
+        <div class="swiper-pagination section__pagination"></div>
       </div>
       <button class="show-more section__show-more" data-show-more-name="Показать все" data-show-all-class="section__content--show-all">Показать все</button>
     </section>
     <section class="section page__section">
       <h2 class="section__title">Цены на услуги</h2>
-      <div class="section__content equipment-swiper-container section__content--prices prices">
+      <div class="section__content swiper-container section__content--prices prices">
           <ul class="prices__info prices__info--caption">
               <li class="prices__info-item">
                   <span class="prices__info-title prices__info-title--caption">Ремонтные услуги</span>
@@ -282,8 +282,8 @@
                   <span class="prices__info-title prices__info-title--caption">Срок</span>
               </li>
           </ul>
-          <ul class="prices__list">
-              <li class="prices__item">
+          <ul class="prices__list swiper-wrapper">
+              <li class="prices__item swiper-slide">
                   <ul class="prices__info">
                       <li class="prices__info-item">
                           <span class="prices__info-title">Ремонтные услуги</span>
@@ -300,7 +300,7 @@
                   </ul>
                   <a class="prices__link" href="#">заказать</a>
               </li>
-              <li class="prices__item">
+              <li class="prices__item swiper-slide">
                   <ul class="prices__info">
                       <li class="prices__info-item">
                           <span class="prices__info-title">Ремонтные услуги</span>
@@ -317,7 +317,7 @@
                   </ul>
                   <a class="prices__link" href="#">заказать</a>
               </li>
-              <li class="prices__item">
+              <li class="prices__item swiper-slide">
                   <ul class="prices__info">
                       <li class="prices__info-item">
                           <span class="prices__info-title">Ремонтные услуги</span>
@@ -334,7 +334,7 @@
                   </ul>
                   <a class="prices__link" href="#">заказать</a>
               </li>
-              <li class="prices__item">
+              <li class="prices__item swiper-slide">
                   <ul class="prices__info">
                       <li class="prices__info-item">
                           <span class="prices__info-title">Ремонтные услуги</span>
@@ -351,7 +351,7 @@
                   </ul>
                   <a class="prices__link" href="#">заказать</a>
               </li>
-              <li class="prices__item">
+              <li class="prices__item swiper-slide">
                   <ul class="prices__info">
                       <li class="prices__info-item">
                           <span class="prices__info-title">Ремонтные услуги</span>
@@ -369,7 +369,14 @@
                   <a class="prices__link" href="#">заказать</a>
               </li>
           </ul>
+          <div class="swiper-pagination section__pagination"></div>
       </div>
+      <p class="section__clarification">
+        Все цены указаны с учетом НДС. Стоимость ремонта указана
+        на единичную услугу. Для получения коммерческого
+        предложения на постоянное обслуживание, оставьте заявку.
+      </p>
+      <a class="section__offer-link" href="#">Получить коммерческое предложение</a>
     </section>
   </main>
   <footer class="footer">

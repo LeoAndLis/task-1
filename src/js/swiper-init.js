@@ -1,53 +1,51 @@
-window.onresize = addSwiper;
-window.onload   = addSwiper;
+window.onresize = addSwipers;
+window.onload   = addSwipers;
 
-let brandsSwiper;
-let equipmentSwiper;
+const TABLET_WIDTH = 768;
+
+let swipers = document.querySelectorAll('.swiper-container');
+let activeSwipers = [];
 let swipersIsActivated = false;
 
-function addSwiper(){
+function addSwipers() {
+  if(document.documentElement.clientWidth < TABLET_WIDTH) {
 
-  if(document.documentElement.clientWidth < 768) {
-
-    if (swipersIsActivated){
+    if (swipersIsActivated) {
       return false;
     }
 
-    brandsSwiper = new Swiper('.brands-swiper-container', {
-      direction: 'horizontal',
-      slidesPerView: 'auto',
-      loop: false,
-      pagination: {
-        el: '.brands-swiper-pagination',
-      },
-      a11y: {
-        enabled: false,
-      },
-    });
+    swipers.forEach(function(curSwiper) {
 
-    equipmentSwiper = new Swiper('.equipment-swiper-container', {
-      direction: 'horizontal',
-      slidesPerView: 'auto',
-      loop: false,
-      pagination: {
-        el: '.equipment-swiper-pagination',
-      },
-      a11y: {
-        enabled: false,
-      },
+      activeSwipers.push(new Swiper( curSwiper, {
+        direction: 'horizontal',
+        slidesPerView: 'auto',
+        loop: false,
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        a11y: {
+          enabled: false,
+        },
+      }));
+
     });
 
     swipersIsActivated = true;
 
   } else {
 
-    if (!swipersIsActivated){
+    if (!swipersIsActivated || !activeSwipers.length){
       return false;
     }
 
-    brandsSwiper.destroy(true, true);
-    equipmentSwiper.destroy(true, true);
+    while(activeSwipers.length){
+
+      let curSwiper = activeSwipers.pop();
+      curSwiper.destroy(true, true);
+
+    }
 
     swipersIsActivated = false;
+
   }
 }
