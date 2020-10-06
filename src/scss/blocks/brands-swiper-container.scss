@@ -1,14 +1,3 @@
-.brands-swiper-container::after{
-  background: linear-gradient(270deg, $bgSections 16.84%, transparent 100%);
-  content: "";
-  height: 82px;
-  position: absolute;
-  right: 0;
-  top: 11px;
-  width: 24px;
-  z-index: 2;
-}
-
 .brands-swiper-container {
   height: 120px;
 }

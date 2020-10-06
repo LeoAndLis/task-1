@@ -31,14 +31,34 @@
   text-align: center;
 }
 
+.section__content--brands::after,
+.section__content--equipment::after,
+.section__content--prices::after{
+  background: linear-gradient(270deg, $bgSections 16.84%, transparent 100%);
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 11px;
+  width: 24px;
+  z-index: 2;
+}
+
+.section__content--brands::after{
+    height: 82px;
+}
+
+.section__content--equipment::after{
+    height: 172px;
+}
+
+.section__content--prices::after{
+    height: 210px;
+}
+
 @media screen and (min-width: $tablet) {
   .section__content{
     padding: 24px 0 16px 24px;
     overflow: hidden;
-  }
-
-  .section__content::after{
-    display: none;
   }
 
   .section__content--brands{
@@ -47,6 +67,10 @@
 
   .section__content--equipment{
     max-height: 200px;
+  }
+  
+  .section__content--prices{
+    padding-right: 24px;
   }
 
   .section__content--show-all{
@@ -61,6 +85,16 @@
     display: block;
     margin-left: 24px;
   }
+  
+  .section__title {
+      padding-left: 24px;
+  }
+
+  .section__content--brands::after,
+  .section__content--equipment::after,
+  .section__content--prices::after{
+      display: none;
+  }
 }
 
 @media screen and (min-width: $desktop) {
@@ -68,7 +102,15 @@
     padding-left: 32px;
   }
 
+  .section__content--prices{
+    padding-right: 32px;
+  }
+
   .section__show-more {
     margin-left: 32px;
+  }
+  
+  .section__title {
+      padding-left: 32px;
   }
 }
