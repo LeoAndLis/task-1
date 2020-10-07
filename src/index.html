@@ -17,10 +17,10 @@
     </div>
     <ul class="header__feedback-list feedback-list">
       <li class="feedback-list__item">
-        <button class="round-icon round-icon--call"></button>
+        <button class="round-icon round-icon--call show-popup" data-popup-name="call"></button>
       </li>
       <li class="feedback-list__item">
-        <button class="round-icon round-icon--chat"></button>
+        <button class="round-icon round-icon--chat show-popup" data-popup-name="chat"></button>
       </li>
       <li class="feedback-list__item">
         <a href="#" class="round-icon round-icon--profile"></a>
@@ -38,7 +38,7 @@
   <main class="main">
     <aside class="menu">
       <header class="menu__header">
-        <button class="round-icon round-icon--close"></button>
+        <button class="round-icon round-icon--close menu__button-close"></button>
         <div class="menu__logo logo">
           <a class="logo__link" href="#">
             <img class="logo__img" src="img/logo.svg" alt="Логотип">
@@ -75,10 +75,10 @@
       <footer class="menu__footer">
         <ul class="menu__feedback-list feedback-list">
           <li class="feedback-list__item">
-            <button class="round-icon round-icon--call"></button>
+            <button class="round-icon round-icon--call show-popup" data-popup-name="call"></button>
           </li>
           <li class="feedback-list__item">
-            <button class="round-icon round-icon--chat"></button>
+            <button class="round-icon round-icon--chat show-popup" data-popup-name="chat"></button>
           </li>
           <li class="feedback-list__item">
             <a href="#" class="round-icon round-icon--profile"></a>
@@ -298,7 +298,7 @@
                           30 мин
                       </li>
                   </ul>
-                  <a class="prices__link" href="#">заказать</a>
+                  <a class="prices__link send-button" href="#">заказать</a>
               </li>
               <li class="prices__item swiper-slide">
                   <ul class="prices__info">
@@ -315,7 +315,7 @@
                           30-120 мин
                       </li>
                   </ul>
-                  <a class="prices__link" href="#">заказать</a>
+                  <a class="prices__link send-button" href="#">заказать</a>
               </li>
               <li class="prices__item swiper-slide">
                   <ul class="prices__info">
@@ -332,7 +332,7 @@
                           30-120 мин
                       </li>
                   </ul>
-                  <a class="prices__link" href="#">заказать</a>
+                  <a class="prices__link send-button" href="#">заказать</a>
               </li>
               <li class="prices__item swiper-slide">
                   <ul class="prices__info">
@@ -349,7 +349,7 @@
                           30-120 мин
                       </li>
                   </ul>
-                  <a class="prices__link" href="#">заказать</a>
+                  <a class="prices__link send-button" href="#">заказать</a>
               </li>
               <li class="prices__item swiper-slide">
                   <ul class="prices__info">
@@ -366,7 +366,7 @@
                           30-120 мин
                       </li>
                   </ul>
-                  <a class="prices__link" href="#">заказать</a>
+                  <a class="prices__link send-button" href="#">заказать</a>
               </li>
           </ul>
           <div class="swiper-pagination section__pagination"></div>
@@ -388,6 +388,25 @@
       <li class="footer__item">Информация, размещенная на данной странице, не является публичной оффертой</li>
     </ul>
   </footer>
+  <div class="overlay overlay--menu"></div>
+  <div class="overlay overlay--popup"></div>
+  <div class="popup">
+      <button class="round-icon round-icon--close popup__button-close"></button>
+      <div class="popup__title title">Обратная связь</div>
+      <form class="form" action="" method="post">
+          <input class="form__item" type="text" name="text" placeholder="Имя">
+          <input class="form__item" type="tel" name="tel" placeholder="Телефон">
+          <input class="form__item" type="email" name="email" placeholder="Электронная почта">
+          <textarea class="form__item form__textarea" name="message" placeholder="Сообщение"></textarea>
+          <p class="form__notification">
+              Нажимая “отправить”, вы даете согласие на
+              <a class="form__link" href="#">обработку персональных данных</a>
+              и соглашаетесь с нашей
+              <a class="form__link" href="#">политикой конфиденциальности</a>
+          </p>
+          <button type="submit" class="form__button send-button">отправить</button>
+      </form>
+  </div>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </div>
 </body>
