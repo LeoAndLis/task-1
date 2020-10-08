@@ -89,7 +89,7 @@ btnsShowPopup.forEach(function(button) {
 /* hide menu/popup and remove closing listeners */
 
 function hide(event) {
-    if (event.Code !== undefined && event.code !== 'Escape'){
+    if (event.type === 'keyup' && event.code !== 'Escape'){
         return false;
     }
 
