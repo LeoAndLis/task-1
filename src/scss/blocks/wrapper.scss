@@ -1,11 +1,10 @@
 .wrapper{
-  background-color: $bgSections;
-  margin: 0 auto;
-  min-width: $minWidth;
-  position: relative;
-}
-@media screen and (min-width: $desktop) {
-  .wrapper {
-    padding-left: 320px;
-  }
+    background-color: $bgSections;
+    margin: 0 auto;
+    min-width: $minWidth;
+    position: relative;
+
+    @media screen and (min-width: $desktop) {
+        padding-left: 320px;
+    }
 }

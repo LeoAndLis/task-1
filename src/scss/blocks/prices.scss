@@ -1,107 +1,115 @@
-.prices__list{
-    display: flex;
-}
+.prices {
 
-.prices__item{
-    background-color: $bgSite;
-    border-radius: 6px;
-    box-sizing: border-box;
-    height: 200px;
-    margin-right: 16px;
-    padding: 16px;
-    position: relative;
-    min-width: 260px;
-    width: 260px;
-}
+    &__list{
+        display: flex;
 
-.prices__info{
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-between;
-    line-height: 18px;
-}
+        @media screen and (min-width: $tablet) {
+            background-color: $bgSite;
+            border-radius: 6px;
+            flex-direction: column;
+            padding: 0 16px;
+        }
 
-.prices__info--caption{
-    display: none;
-}
+        @media screen and (min-width: $desktop) {
+            padding: 0 24px;
+        }
+    }
 
-.prices__link{
-    background-position-x: 96px;
-    bottom: 16px;
-    position: absolute;
-    right: 16px;
-    width: 119px;
-}
-
-.prices__info-title{
-    color: $activeLinkColor;
-    display: block;
-    line-height: 16px;
-    margin-bottom: 4px;
-}
-
-@media screen and (min-width: $tablet) {
-    .prices__list{
+    &__item{
         background-color: $bgSite;
         border-radius: 6px;
+        box-sizing: border-box;
+        height: 200px;
+        margin-right: 16px;
+        padding: 16px;
+        position: relative;
+        min-width: 260px;
+        width: 260px;
+
+        @media screen and (min-width: $tablet) {
+            border-bottom: 1px solid $borderColor;
+            display: flex;
+            height: auto;
+            margin-right: 0;
+            min-width: auto;
+            padding: 16px 0;
+            width: 100%;
+        }
+    }
+
+    &__item:last-child{
+        @media screen and (min-width: $tablet) {
+            border: none;
+        }
+    }
+
+    &__info{
+        display: flex;
         flex-direction: column;
-        padding: 0 16px;
+        height: 100%;
+        justify-content: space-between;
+        line-height: 18px;
+
+        @media screen and (min-width: $tablet) {
+            align-items: center;
+            flex-direction: row;
+            height: 32px;
+            width: 100%;
+        }
+
+        &--caption{
+            display: none;
+
+            @media screen and (min-width: $tablet) {
+                display: flex;
+                padding: 0 135px 0 16px;
+            }
+
+            @media screen and (min-width: $desktop) {
+                padding: 0 143px 0 24px;
+            }
+        }
     }
 
-    .prices__item{
-        border-bottom: 1px solid $borderColor;
-        display: flex;
-        height: auto;
-        margin-right: 0;
-        min-width: auto;
-        padding: 16px 0;
-        width: 100%;
+
+    &__info-item{
+        @media screen and (min-width: $tablet) {
+            width: 17.5%
+        }
     }
 
-    .prices__item:last-child{
-        border: none;
+    &__info-item:first-child{
+        @media screen and (min-width: $tablet) {
+            width: 65%
+        }
     }
 
-    .prices__info{
-        align-items: center;
-        flex-direction: row;
-        height: 32px;
-        width: 100%;
-    }
-
-    .prices__info--caption{
-        display: flex;
-        padding: 0 135px 0 16px;
-    }
-
-    .prices__info-item{
-        width: 17.5%
-    }
-
-    .prices__info-item:first-child{
-        width: 65%
-    }
-
-    .prices__info-title{
-        display: none;
-    }
-
-    .prices__info-title--caption{
+    &__info-title{
+        color: $activeLinkColor;
         display: block;
+        line-height: 16px;
+        margin-bottom: 4px;
+
+        @media screen and (min-width: $tablet) {
+            display: none;
+        }
+
+        &--caption{
+            @media screen and (min-width: $tablet) {
+                display: block;
+            }
+        }
     }
 
-    .prices__link{
-        position: static;
-    }
-}
+    &__link{
+        background-position-x: 96px;
+        bottom: 16px;
+        position: absolute;
+        right: 16px;
+        width: 119px;
 
-@media screen and (min-width: $desktop) {
-    .prices__list{
-        padding: 0 24px;
-    }
-
-    .prices__info--caption{
-        padding: 0 143px 0 24px;
+        @media screen and (min-width: $tablet) {
+            position: static;
+        }
     }
 }

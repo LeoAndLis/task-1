@@ -9,12 +9,12 @@
         height: 48px;
         margin-bottom: 16px;
         padding: 12px 16px;
+
+        &--hide {
+            display: none;
+        }
     }
 
-    &__item--hide {
-        display: none;
-    }
-    
     &__textarea {
         height: 118px;
         resize: none;

@@ -5,16 +5,12 @@
     letter-spacing: -0.6px;
     line-height: 40px;
     padding-left: 16px;
-}
 
-@media screen and (min-width: $tablet) {
-    .title{
+    @media screen and (min-width: $tablet) {
         padding-left: 24px;
     }
-}
 
-@media screen and (min-width: $desktop) {
-    .title{
+    @media screen and (min-width: $desktop) {
         background-image: url("data:image/svg+xml,%3Csvg width='3' height='40' viewBox='0 0 3 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M3 1.5C3 0.671574 2.32843 0 1.5 0C0.671573 0 0 0.671573 0 1.5V38.5C0 39.3284 0.671573 40 1.5 40C2.32843 40 3 39.3284 3 38.5V1.5Z' fill='%2341F6D7'/%3E%3C/svg%3E%0A");
         background-repeat: no-repeat;
         padding-left: 32px;
