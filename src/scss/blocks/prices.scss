@@ -35,13 +35,14 @@
             padding: 16px 0;
             width: 100%;
         }
-    }
 
-    &__item:last-child{
-        @media screen and (min-width: $tablet) {
-            border: none;
+        &:last-child{
+            @media screen and (min-width: $tablet) {
+                border: none;
+            }
         }
     }
+
 
     &__info{
         display: flex;
@@ -76,13 +77,14 @@
         @media screen and (min-width: $tablet) {
             width: 17.5%
         }
-    }
 
-    &__info-item:first-child{
-        @media screen and (min-width: $tablet) {
-            width: 65%
+        &:first-child{
+            @media screen and (min-width: $tablet) {
+                width: 65%
+            }
         }
     }
+
 
     &__info-title{
         color: $activeLinkColor;

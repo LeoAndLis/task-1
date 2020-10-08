@@ -19,10 +19,6 @@
         border-radius: 1px;
         height: 32px;
         width: 2px;
-
-        @media screen and (min-width: $tablet) {
-            margin: 0 12px;
-        }
     }
 
     &::before {
@@ -31,6 +27,7 @@
 
         @media screen and (min-width: $tablet) {
             display: block;
+            margin: 0 12px;
             order: 1;
         }
     }
@@ -38,6 +35,10 @@
     &::after {
         margin: 0 12px 0 auto;
         order: 4;
+
+        @media screen and (min-width: $tablet) {
+            margin: 0 12px;
+        }
     }
 
     &__logo{
