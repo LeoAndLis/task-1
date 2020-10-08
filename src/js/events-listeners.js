@@ -30,7 +30,7 @@ const formItemsPopup = popup.querySelectorAll('.form__item:not([type=tel])');
 const overlayMenu = document.querySelector('.overlay--menu');
 const overlayPopup = document.querySelector('.overlay--popup');
 
-let countPopupped = 0;
+let arrayPopupped = [];
 
 /* add listeners to burger buttons for showing menu */
 
@@ -39,12 +39,14 @@ burgerButton.addEventListener('click', function(){
     menu.classList.add('menu--visible');
     overlayMenu.classList.add('overlay--visible');
     
-    btnMenuClose.addEventListener('click', function(){hide('menu');});
-    overlayMenu.addEventListener('click', function(){hide('menu');});
+    btnMenuClose.addEventListener('click', hide);
+    overlayMenu.addEventListener('click', hide);
     
-    countPopupped++;
+    arrayPopupped.push('menu');
 
-    addKeyListener('menu');
+    if (arrayPopupped.length === 1){
+        document.addEventListener('keyup', hide);
+    }
 });
 
 /* add listeners to .show-popup buttons */
@@ -52,8 +54,8 @@ burgerButton.addEventListener('click', function(){
 btnsShowPopup.forEach(function(button) {
     button.addEventListener('click', function(){
 
-        btnPopupClose.addEventListener('click',  function(){hide('popup');});
-        overlayPopup.addEventListener('click',  function(){hide('popup');});
+        btnPopupClose.addEventListener('click',  hide);
+        overlayPopup.addEventListener('click',  hide);
 
         btnPopupClose.classList.add('popup__button-close--visible');
         overlayPopup.classList.add('overlay--visible');
@@ -76,19 +78,22 @@ btnsShowPopup.forEach(function(button) {
 
         popup.classList.add('popup--visible');
 
-        countPopupped++;
+        arrayPopupped.push('popup')
 
-        addKeyListener('popup');
+        if (arrayPopupped.length === 1){
+            document.addEventListener('keyup', hide);
+        }
     });
 });
 
 /* hide menu/popup and remove closing listeners */
 
-function hide(el_type, key_code) {
-console.log(countPopupped + ' - ' + el_type);
-    if (key_code !== undefined && key_code !== 'Escape'){
+function hide(event) {
+    if (event.Code !== undefined && event.code !== 'Escape'){
         return false;
     }
+
+    el_type = arrayPopupped.pop();
 
     if (el_type === 'popup') {
         popup.classList.remove('popup--visible');
@@ -98,7 +103,6 @@ console.log(countPopupped + ' - ' + el_type);
         btnPopupClose.removeEventListener('click', hide);
         overlayPopup.removeEventListener('click', hide);
 
-        countPopupped--;
     }
     
     if (el_type === 'menu') {
@@ -108,22 +112,9 @@ console.log(countPopupped + ' - ' + el_type);
         btnMenuClose.removeEventListener('click', hide);
         overlayMenu.removeEventListener('click', hide);
 
-        countPopupped--;
     }
 
-    if ( countPopupped === 0 ) {
+    if ( arrayPopupped.length === 0 ) {
         document.removeEventListener('keyup', hide);
     }
-}
-
-function addKeyListener(el_type) {
-    console.log(countPopupped + ' - ' + el_type);
-    if (countPopupped === 2) {
-        console.log('Remove key listener');
-        document.removeEventListener('keyup', hide);
-    }
-
-    document.addEventListener('keyup', function(e){
-        hide(el_type, e.code);
-    });
 }
