@@ -358,13 +358,19 @@ img {
 
 a {
   color: #1B1C21;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: opacity 0.5s; }
 
 button {
   background: none;
   border: none;
   cursor: pointer;
-  font-size: 16px; }
+  font-size: 16px;
+  transition: opacity 0.5s; }
+
+a:hover,
+button:hover {
+  opacity: 0.7; }
 
 .article__text {
   padding: 0 16px; }
@@ -608,6 +614,9 @@ button {
         right: 32px;
         top: 130px;
         visibility: visible; } }
+
+.logo__link {
+  display: block; }
 
 .main__wrapper {
   background-color: #F8F8F8; }
