@@ -1,5 +1,5 @@
-window.onresize = addSwipers;
-window.onload   = addSwipers;
+window.addEventListener('resize', addSwipers);
+window.addEventListener('load', addSwipers);
 
 const TABLET_WIDTH = 768;
 
