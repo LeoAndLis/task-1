@@ -1,0 +1,38 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    padding: 24px 16px;
+    
+    &__item {
+        border: 1px solid $borderColor;
+        border-radius: 8px;
+        height: 48px;
+        margin-bottom: 16px;
+        padding: 12px 16px;
+    }
+
+    &__item--hide {
+        display: none;
+    }
+    
+    &__textarea {
+        height: 118px;
+        resize: none;
+    }
+
+    &__notification {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    
+    &__link {
+        color: $btnColor;
+    }
+    
+    &__button {
+        align-self: flex-end;
+        background-position-x: 110px;
+        margin-top: 23px;
+        width: 136px;
+    }
+}

@@ -1,0 +1,22 @@
+.overlay{
+    background: $bgSite;
+    display: none;
+    height: 100vh;
+    left: 0;
+    opacity: 0.96;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    
+    &--menu {
+        z-index: 9;
+    }
+    
+    &--popup {
+        z-index: 15;
+    }
+    
+    &--visible {
+        display: block;
+    }
+}
