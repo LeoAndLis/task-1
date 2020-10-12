@@ -1,4 +1,5 @@
 import '../scss/style.scss';
 
-import './events-listeners';
+import './show-more-listeners';
+import './popup-block-listeners';
 import './swiper-init';

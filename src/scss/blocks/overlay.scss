@@ -7,16 +7,17 @@
     position: fixed;
     top: 0;
     width: 100vw;
-    
-    &--menu {
-        z-index: 9;
-    }
-    
-    &--popup {
+    z-index: 9;
+
+    @media screen and (min-width: $desktop) {
         z-index: 15;
     }
-    
+
     &--visible {
         display: block;
+    }
+
+    &--second-lvl {
+        z-index: 15;
     }
 }

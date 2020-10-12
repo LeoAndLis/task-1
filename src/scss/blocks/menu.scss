@@ -4,24 +4,11 @@
     display: flex;
     flex-direction: column;
     height: 100vh;
-    left: -340px;
+    left: 0;
     position: absolute;
     top: 0;
-    transition-duration: 0.5s;
-    transition-property: left, box-shadow;
     width: 320px;
     z-index: 10;
-
-    @media screen and (min-width: $desktop) {
-        box-shadow: none;
-        left: 0;
-        position: fixed;
-    }
-
-    &--visible {
-        box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
-        left: 0;
-    }
 
     &__header {
         align-items: center;
