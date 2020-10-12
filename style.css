@@ -681,21 +681,11 @@ button:hover {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  left: -340px;
+  left: 0;
   position: absolute;
   top: 0;
-  transition-duration: 0.5s;
-  transition-property: left, box-shadow;
   width: 320px;
   z-index: 10; }
-  @media screen and (min-width: 1366px) {
-    .menu {
-      box-shadow: none;
-      left: 0;
-      position: fixed; } }
-  .menu--visible {
-    box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
-    left: 0; }
   .menu__header {
     align-items: center;
     background-color: #FFFFFF;
@@ -812,13 +802,36 @@ button:hover {
   opacity: 0.96;
   position: fixed;
   top: 0;
-  width: 100vw; }
-  .overlay--menu {
-    z-index: 9; }
-  .overlay--popup {
-    z-index: 15; }
+  width: 100vw;
+  z-index: 9; }
+  @media screen and (min-width: 1366px) {
+    .overlay {
+      z-index: 15; } }
   .overlay--visible {
     display: block; }
+  .overlay--second-lvl {
+    z-index: 15; }
+
+.popup-block {
+  box-shadow: none;
+  position: fixed;
+  transition-duration: 0.5s;
+  transition-property: margin, box-shadow; }
+  .popup-block--menu {
+    box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
+    margin-left: -340px; }
+    @media screen and (min-width: 1366px) {
+      .popup-block--menu {
+        box-shadow: none;
+        margin-left: 0; } }
+  .popup-block--call {
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    margin-right: -540px; }
+  .popup-block--chat {
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    margin-right: -540px; }
+  .popup-block--visible {
+    margin: 0; }
 
 .popup {
   background-color: #FFFFFF;
@@ -828,30 +841,24 @@ button:hover {
   height: 100vh;
   width: 320px;
   position: fixed;
-  right: -460px;
+  right: 0;
   top: 0;
-  transition-duration: 0.5s;
-  transition-property: right, box-shadow;
   z-index: 20; }
   @media screen and (min-width: 768px) {
     .popup {
       max-width: 440px;
       width: auto; } }
-  .popup--visible {
-    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-    right: 0; }
+  .popup__container {
+    position: relative; }
   .popup__button-close {
-    display: none;
     margin-top: 24px;
     margin-left: 16px; }
     @media screen and (min-width: 768px) {
       .popup__button-close {
         margin: 0;
-        position: fixed;
-        right: 473px;
-        top: 32px; }
-        .popup__button-close--visible {
-          display: block; } }
+        position: absolute;
+        left: -72px;
+        top: 32px; } }
   .popup__title {
     font-size: 24px;
     margin-top: 32px; }
