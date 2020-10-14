@@ -1,5 +1,5 @@
-const btnShowMenu = document.querySelector('.round-icon--burger');
-const btnHideMenu = document.querySelector('.menu__button-close');
+const buttonOpenMenu = document.querySelector('.open-menu');
+const btnHideMenu = document.querySelector('.close-menu');
 const overlay = document.querySelector('.overlay--menu');
 const overlayPopup = document.querySelector('.overlay--popup');
 const menu = document.querySelector('.menu');
@@ -15,7 +15,7 @@ function openMenu() {
 
   wrapper.classList.add('wrapper--hide-overflow');
 
-  btnShowMenu.removeEventListener('click', openMenuButtonClickHandler);
+  buttonOpenMenu.removeEventListener('click', openMenuButtonClickHandler);
 }
 
 function closeMenu() {
@@ -29,7 +29,7 @@ function closeMenu() {
 
   wrapper.classList.remove('wrapper--hide-overflow');
 
-  btnShowMenu.addEventListener('click', openMenuButtonClickHandler);
+  buttonOpenMenu.addEventListener('click', openMenuButtonClickHandler);
 }
 
 function openMenuButtonClickHandler() {
@@ -51,4 +51,4 @@ function overlayClickHandler() {
   closeMenu();
 }
 
-btnShowMenu.addEventListener('click', openMenuButtonClickHandler);
+buttonOpenMenu.addEventListener('click', openMenuButtonClickHandler);

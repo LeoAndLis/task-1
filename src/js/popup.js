@@ -1,4 +1,4 @@
-const btnsShowPopup = document.querySelectorAll('.show-popup');
+const buttonsOpenPopup = document.querySelectorAll('.open-popup');
 const overlay = document.querySelector('.overlay--popup');
 const overlayMenu = document.querySelector('.overlay--menu');
 const wrapper = document.querySelector('.wrapper');
@@ -10,7 +10,7 @@ function openPopup(element) {
   currentPopuppedBlock = document.querySelector('.popup-block--' + currentPopuppedName);
 
   currentPopuppedBlock.classList.add('popup-block--visible');
-  currentPopuppedBlock.querySelector('.round-icon--close').addEventListener('click',  closePopupButtonClickHandler);
+  currentPopuppedBlock.querySelector('.popup__button-close').addEventListener('click',  popupButtonCloseClickHandler);
 
   overlay.addEventListener('click',  overlayClickHandler);
   document.addEventListener('keyup', escapeKeyupHandler);
@@ -21,7 +21,7 @@ function openPopup(element) {
     wrapper.classList.add('wrapper--hide-overflow');
   }
 
-  btnsShowPopup.forEach(function(button) {
+  buttonsOpenPopup.forEach(function(button) {
     button.removeEventListener('click', openPopupClickHandler);
   });
 }
@@ -29,7 +29,7 @@ function openPopup(element) {
 function closePopup() {
 
   currentPopuppedBlock.classList.remove('popup-block--visible');
-  currentPopuppedBlock.querySelector('.round-icon--close').removeEventListener('click',  closePopupButtonClickHandler);
+  currentPopuppedBlock.querySelector('.popup__button-close').removeEventListener('click',  popupButtonCloseClickHandler);
 
   document.removeEventListener('keyup', escapeKeyupHandler);
   overlay.removeEventListener('click', overlayClickHandler);
@@ -39,7 +39,7 @@ function closePopup() {
     wrapper.classList.remove('wrapper--hide-overflow');
   }
 
-  btnsShowPopup.forEach(function(button) {
+  buttonsOpenPopup.forEach(function(button) {
     button.addEventListener('click', openPopupClickHandler);
   });
 }
@@ -48,7 +48,7 @@ function openPopupClickHandler(event) {
   openPopup(event.target);
 }
 
-function closePopupButtonClickHandler(){
+function popupButtonCloseClickHandler(){
   closePopup();
 }
 
@@ -63,6 +63,6 @@ function escapeKeyupHandler(event) {
   closePopup();
 }
 
-btnsShowPopup.forEach(function(button) {
+buttonsOpenPopup.forEach(function(button) {
     button.addEventListener('click', openPopupClickHandler);
 });
