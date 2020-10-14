@@ -1,5 +1,6 @@
 import '../scss/style.scss';
 
-import './show-more-listeners';
-import './popup-block-listeners';
+import './menu';
+import './popup';
+import './show-more';
 import './swiper-init';
