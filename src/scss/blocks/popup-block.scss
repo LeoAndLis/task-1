@@ -1,0 +1,30 @@
+.popup-block{
+    box-shadow: none;
+    position: fixed;
+    transition-duration: 0.5s;
+    transition-property: margin, box-shadow;
+
+    &--menu{
+        box-shadow: 16px 0 52px rgba(14, 24, 80, 0.2);
+        margin-left: -340px;
+
+        @media screen and (min-width: $desktop) {
+            box-shadow: none;
+            margin-left: 0;
+        }
+    }
+
+    &--call{
+        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+        margin-right: -540px;
+    }
+
+    &--chat{
+        box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+        margin-right: -540px;
+    }
+
+    &--visible{
+        margin: 0;
+    }
+}
