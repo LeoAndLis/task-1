@@ -13,6 +13,8 @@ function showMenuButtonClickHandler() {
     overlay.addEventListener('click',  hideMenuHandler);
     document.addEventListener('keyup', hideMenuHandler);
     btnHideMenu.addEventListener('click', hideMenuHandler);
+
+    btnShowMenu.removeEventListener('click', showMenuButtonClickHandler);
 }
 
 function hideMenuHandler(event) {
@@ -26,6 +28,8 @@ function hideMenuHandler(event) {
     
     menu.classList.remove('popup-block--visible');
     overlay.classList.remove('overlay--visible');
+
+    btnShowMenu.addEventListener('click', showMenuButtonClickHandler);
 }
 
 btnShowMenu.addEventListener('click', showMenuButtonClickHandler);
