@@ -9,7 +9,7 @@
 <body class="body">
 <div class="wrapper">
   <header class="header">
-    <button class="header__button round-icon round-icon--burger show-popup" data-popup-name="menu"></button>
+    <button class="header__button round-icon round-icon--burger" data-popup-name="menu"></button>
     <div class="header__logo logo">
       <a class="logo__link" href="#">
         <img class="logo__img" src="img/logo.svg" alt="Логотип">
@@ -377,41 +377,38 @@
       <li class="footer__item">Информация, размещенная на данной странице, не является публичной оффертой</li>
     </ul>
   </footer>
-  <div class="overlay"></div>
+  <div class="overlay overlay--menu"></div>
+  <div class="overlay overlay--popup"></div>
   <div class="popup popup-block popup-block--chat">
-      <div class="popup_container">
-          <button class="round-icon round-icon--close popup__button-close"></button>
-          <div class="popup__title title">Обратная связь</div>
-          <form class="form" action="" method="post">
-              <input class="form__item" type="text" name="text" placeholder="Имя">
-              <input class="form__item" type="tel" name="tel" placeholder="Телефон">
-              <input class="form__item" type="email" name="email" placeholder="Электронная почта">
-              <textarea class="form__item form__textarea" name="message" placeholder="Сообщение"></textarea>
-              <p class="form__notification">
-                  Нажимая “отправить”, вы даете согласие на
-                  <a class="form__link" href="#">обработку персональных данных</a>
-                  и соглашаетесь с нашей
-                  <a class="form__link" href="#">политикой конфиденциальности</a>
-              </p>
-              <button type="submit" class="form__button send-button">отправить</button>
-          </form>
-      </div>
+      <button class="round-icon round-icon--close popup__button-close"></button>
+      <div class="popup__title title">Обратная связь</div>
+      <form class="form" action="" method="post">
+          <input class="form__item" type="text" name="text" placeholder="Имя">
+          <input class="form__item" type="tel" name="tel" placeholder="Телефон">
+          <input class="form__item" type="email" name="email" placeholder="Электронная почта">
+          <textarea class="form__item form__textarea" name="message" placeholder="Сообщение"></textarea>
+          <p class="form__notification">
+              Нажимая “отправить”, вы даете согласие на
+              <a class="form__link" href="#">обработку персональных данных</a>
+              и соглашаетесь с нашей
+              <a class="form__link" href="#">политикой конфиденциальности</a>
+          </p>
+          <button type="submit" class="form__button send-button">отправить</button>
+      </form>
   </div>
   <div class="popup popup-block popup-block--call">
-      <div class="popup_container">
-          <button class="round-icon round-icon--close popup__button-close"></button>
-          <div class="popup__title title">Заказать звонок</div>
-          <form class="form" action="" method="post">
-              <input class="form__item" type="tel" name="tel" placeholder="Телефон">
-              <p class="form__notification">
-                  Нажимая “отправить”, вы даете согласие на
-                  <a class="form__link" href="#">обработку персональных данных</a>
-                  и соглашаетесь с нашей
-                  <a class="form__link" href="#">политикой конфиденциальности</a>
-              </p>
-              <button type="submit" class="form__button send-button">отправить</button>
-          </form>
-      </div>
+      <button class="round-icon round-icon--close popup__button-close"></button>
+      <div class="popup__title title">Заказать звонок</div>
+      <form class="form" action="" method="post">
+          <input class="form__item" type="tel" name="tel" placeholder="Телефон">
+          <p class="form__notification">
+              Нажимая “отправить”, вы даете согласие на
+              <a class="form__link" href="#">обработку персональных данных</a>
+              и соглашаетесь с нашей
+              <a class="form__link" href="#">политикой конфиденциальности</a>
+          </p>
+          <button type="submit" class="form__button send-button">отправить</button>
+      </form>
   </div>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 </div>
