@@ -3,33 +3,52 @@ const btnHideMenu = document.querySelector('.menu__button-close');
 const overlay = document.querySelector('.overlay--menu');
 const overlayPopup = document.querySelector('.overlay--popup');
 const menu = document.querySelector('.menu');
+const wrapper = document.querySelector('.wrapper');
 
+function openMenu() {
+  overlay.classList.add('overlay--visible');
+  menu.classList.add('popup-block--visible');
 
-function showMenuButtonClickHandler() {
+  overlay.addEventListener('click',  overlayClickHandler);
+  document.addEventListener('keyup', escapeKeyupHandler);
+  btnHideMenu.addEventListener('click', closeButtonMenuHandler);
 
-    overlay.classList.add('overlay--visible');
-    menu.classList.add('popup-block--visible');
+  wrapper.classList.add('wrapper--hide-overflow');
 
-    overlay.addEventListener('click',  hideMenuHandler);
-    document.addEventListener('keyup', hideMenuHandler);
-    btnHideMenu.addEventListener('click', hideMenuHandler);
-
-    btnShowMenu.removeEventListener('click', showMenuButtonClickHandler);
+  btnShowMenu.removeEventListener('click', openMenuButtonClickHandler);
 }
 
-function hideMenuHandler(event) {
-    if ((event.type === 'keyup' && event.code !== 'Escape') || overlayPopup.classList.contains('overlay--visible')){
-        return false;
-    }
+function closeMenu() {
 
-    overlay.removeEventListener('click',  hideMenuHandler);
-    document.removeEventListener('keyup', hideMenuHandler);
-    btnHideMenu.removeEventListener('click', hideMenuHandler);
-    
-    menu.classList.remove('popup-block--visible');
-    overlay.classList.remove('overlay--visible');
+  overlay.removeEventListener('click',  overlayClickHandler);
+  document.removeEventListener('keyup', escapeKeyupHandler);
+  btnHideMenu.removeEventListener('click', closeButtonMenuHandler);
 
-    btnShowMenu.addEventListener('click', showMenuButtonClickHandler);
+  menu.classList.remove('popup-block--visible');
+  overlay.classList.remove('overlay--visible');
+
+  wrapper.classList.remove('wrapper--hide-overflow');
+
+  btnShowMenu.addEventListener('click', openMenuButtonClickHandler);
 }
 
-btnShowMenu.addEventListener('click', showMenuButtonClickHandler);
+function openMenuButtonClickHandler() {
+  openMenu();
+}
+
+function escapeKeyupHandler(event) {
+  if ((event.type === 'keyup' && event.code !== 'Escape') || overlayPopup.classList.contains('overlay--visible')){
+    return false;
+  }
+  closeMenu();
+}
+
+function closeButtonMenuHandler() {
+  closeMenu();
+}
+
+function overlayClickHandler() {
+  closeMenu();
+}
+
+btnShowMenu.addEventListener('click', openMenuButtonClickHandler);

@@ -7,4 +7,9 @@
     @media screen and (min-width: $desktop) {
         padding-left: 320px;
     }
+
+    &--hide-overflow{
+      height: 100vh;
+      overflow: hidden;
+    }
 }

@@ -1,43 +1,68 @@
 const btnsShowPopup = document.querySelectorAll('.show-popup');
 const overlay = document.querySelector('.overlay--popup');
+const overlayMenu = document.querySelector('.overlay--menu');
+const wrapper = document.querySelector('.wrapper');
 
 let currentPopuppedBlock = [];
 
-function showPopupClickHandler() {
+function openPopup(element) {
+  let currentPopuppedName = element.dataset.popupName;
+  currentPopuppedBlock = document.querySelector('.popup-block--' + currentPopuppedName);
 
-    let currentPopuppedName = this.dataset.popupName;
-    currentPopuppedBlock = document.querySelector('.popup-block--' + currentPopuppedName);
+  currentPopuppedBlock.classList.add('popup-block--visible');
+  currentPopuppedBlock.querySelector('.round-icon--close').addEventListener('click',  closePopupButtonClickHandler);
 
-    currentPopuppedBlock.classList.add('popup-block--visible');
-    currentPopuppedBlock.querySelector('.round-icon--close').addEventListener('click',  hidePopupHandler);
+  overlay.addEventListener('click',  overlayClickHandler);
+  document.addEventListener('keyup', escapeKeyupHandler);
 
-    overlay.addEventListener('click',  hidePopupHandler);
+  overlay.classList.add('overlay--visible');
 
-    overlay.classList.add('overlay--visible');
-    document.addEventListener('keyup', hidePopupHandler);
+  if (!overlayMenu.classList.contains('overlay--visible')) {
+    wrapper.classList.add('wrapper--hide-overflow');
+  }
 
-    btnsShowPopup.forEach(function(button) {
-        button.removeEventListener('click', showPopupClickHandler);
-    });
+  btnsShowPopup.forEach(function(button) {
+    button.removeEventListener('click', openPopupClickHandler);
+  });
 }
 
-function hidePopupHandler(event) {
-    if (event.type === 'keyup' && event.code !== 'Escape'){
-        return false;
-    }
+function closePopup() {
 
-    currentPopuppedBlock.classList.remove('popup-block--visible');
-    currentPopuppedBlock.querySelector('.round-icon--close').removeEventListener('click',  hidePopupHandler);
+  currentPopuppedBlock.classList.remove('popup-block--visible');
+  currentPopuppedBlock.querySelector('.round-icon--close').removeEventListener('click',  closePopupButtonClickHandler);
 
-    document.removeEventListener('keyup', hidePopupHandler);
-    overlay.removeEventListener('click', hidePopupHandler);
-    overlay.classList.remove('overlay--visible');
-    
-    btnsShowPopup.forEach(function(button) {
-        button.addEventListener('click', showPopupClickHandler);
-    });
+  document.removeEventListener('keyup', escapeKeyupHandler);
+  overlay.removeEventListener('click', overlayClickHandler);
+  overlay.classList.remove('overlay--visible');
+
+  if (!overlayMenu.classList.contains('overlay--visible')) {
+    wrapper.classList.remove('wrapper--hide-overflow');
+  }
+
+  btnsShowPopup.forEach(function(button) {
+    button.addEventListener('click', openPopupClickHandler);
+  });
+}
+
+function openPopupClickHandler(event) {
+  openPopup(event.target);
+}
+
+function closePopupButtonClickHandler(){
+  closePopup();
+}
+
+function overlayClickHandler() {
+  closePopup();
+}
+
+function escapeKeyupHandler(event) {
+  if (event.type === 'keyup' && event.code !== 'Escape'){
+    return false;
+  }
+  closePopup();
 }
 
 btnsShowPopup.forEach(function(button) {
-    button.addEventListener('click', showPopupClickHandler);
+    button.addEventListener('click', openPopupClickHandler);
 });
